@@ -25,5 +25,19 @@ def main():
 				largest = a*b
 	return largest
 
+def harrys_method():
+	upper, lower = 9999, 1000
+	for i in xrange(upper*upper, lower*lower, -1):
+		if is_palindrome(i):
+			factor = upper
+			while factor >= lower:
+				if i%factor == 0 and lower-1<(i/factor)<upper+1 :
+					print factor
+					return i
+				else:
+					factor -= 1
+
+
 if __name__ == "__main__":
-	print main()
+	#print main()
+	print harrys_method()
