@@ -26,7 +26,8 @@ def main():
 	return largest
 
 def harrys_method():
-	upper, lower = 9999, 1000
+	"""Enumerate all 6 digit palindromes 999*999 downwards, and inspect each palindrome for a 3 digit factor."""
+	upper, lower = 999, 100
 	for i in xrange(upper*upper, lower*lower, -1):
 		if is_palindrome(i):
 			factor = upper
@@ -39,5 +40,4 @@ def harrys_method():
 
 
 if __name__ == "__main__":
-	#print main()
 	print harrys_method()
