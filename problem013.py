@@ -230,6 +230,5 @@ def main(number_array):
 	return summation
 
 if __name__ == '__main__':
-	# print number_array()
 	print main(number_array())
 
