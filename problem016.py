@@ -22,9 +22,10 @@ def simple_way(base=2, power=1000):
 
 
 def using_list(base=2, power=1000):
-	"""This method stores the number as a list, each digit as a separate element. 
-		This overcomes any limit that may exist on the max size of number datatype.
-		This will only work for base number < 10"""
+	"""
+	This method stores the number as a list, each digit as a separate element. 
+	This overcomes any limit that may exist on the max size of number datatype.
+	"""
 	result = [1]
 	for i in xrange(power):
 		carry = 0
