@@ -34,7 +34,7 @@ def main(lower_bound=1, upper_bound=1000):
 		elif num < 1000:
 			if num%100 == 0: # Multiples of 100
 				word = ' '.join([number_to_word[num/100], 'hundred'])
-			elif num%100 in number_to_word:
+			elif num%100 in number_to_word: # Numbers whose last two digits are in the dict.
 				word = ' '.join([number_to_word[num/100], 'hundred and', number_to_word[num%100]])
 			else:
 				word = ' '.join([number_to_word[num/100], 'hundred and', number_to_word[num%100/10*10], number_to_word[num%10]])
@@ -42,7 +42,7 @@ def main(lower_bound=1, upper_bound=1000):
 			word = number_to_word[num]				
 
 		length += len(word.replace(' ', ''))
-		print num, word, '\t', len(word.replace(' ', ''))
+		# print num, word, '\t', len(word.replace(' ', ''))
 	return length
 
 
