@@ -40,10 +40,10 @@ import pprint
 
 def main(array):
 	""" 
-	I'll admit I started thinking of a tree traversal approach, before reading up on the internet,
+	I'll admit I started thinking of a tree traversal algorithm, before reading up on the internet,
 	and found this approach. Deceptively simple!
 	Essentially, goes bottom-up from the second last row, and at each row finds the bigger adjacent number in the next row and replaces the current number by the sum of itself and the bigger number.
-	Check out this post on SO: http://stackoverflow.com/questions/8002252/euler-project-18-approach
+	You can check out this post on SO: http://stackoverflow.com/questions/8002252/euler-project-18-approach
 	"""
 	while len(array) > 1:
 		# pprint.pprint(array)
