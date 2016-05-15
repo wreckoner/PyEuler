@@ -19,27 +19,9 @@ def simple_way(num=100):
 	This method simply calculates the factorial and then returns the sum of the digits.
 	This method would not work in many languages which have a maximum limit for integral numbers.
 	"""
-	fact = 1
-	for i in xrange(1, 101):
-		fact *= i
-
-	_sum = 0
-	while fact > 0:
-		_sum += fact%10
-		fact /= 10
+	fact = reduce(lambda x,y: x*y, xrange(1, 101))
+	_sum = reduce(lambda x,y:x+int(y), str(fact), 0)
 	return _sum
-
-def multiply_list_by_number(multiplicand, multiplier):
-	carry = 0
-	pass 
-
-
-def using_list(num=100):
-	"""
-	This method computes the factorial using a list, storing each digit in each index. 
-	"""
-	fact = []
-	pass
 
 
 if __name__ == '__main__':
