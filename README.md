@@ -17,4 +17,11 @@ Problem 010:	Summation of primes
 Problem 011:	Largest product in a grid  
 Problem 012:	Highly divisible triangular number  
 Problem 013:	Large sum  
+Problem 014:	Longest Collatz sequence  
+Problem 015:	Lattice paths  
+Problem 016:	Power digit sum  
+Problem 017:	Number letter counts  
+Problem 018:	Maximum path sum I  
+Problem 019:	Counting Sundays  
+Problem 020:	Factorial digit sum  
 
