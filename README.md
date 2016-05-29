@@ -24,4 +24,5 @@ Problem 017:	Number letter counts
 Problem 018:	Maximum path sum I  
 Problem 019:	Counting Sundays  
 Problem 020:	Factorial digit sum  
-Problem 021:	Amicable numbers  
+Problem 021:	Amicable numbers 
+Problem 022:	Names scores   
