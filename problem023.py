@@ -11,7 +11,7 @@ As 12 is the smallest abundant number, 1 + 2 + 3 + 4 + 6 = 16, the smallest numb
 
 Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
 
-Answer: 
+Answer: 4179871
 """
 import math
 
