@@ -1,5 +1,4 @@
-# PyEuler  
-![alt text](https://projecteuler.net/profile/sand_reckoner.png "Project Euler")
+# PyEuler  ![alt text](https://projecteuler.net/profile/sand_reckoner.png "Project Euler")
 
 Python solutions of Project Euler problems.  
 
