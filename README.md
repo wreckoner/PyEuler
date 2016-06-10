@@ -1,4 +1,6 @@
-# PyEuler  ![alt text](https://projecteuler.net/profile/sand_reckoner.png "Project Euler")
+# PyEuler  
+
+![alt text](https://projecteuler.net/profile/sand_reckoner.png "Project Euler")
 
 Python solutions of Project Euler problems.  
 
@@ -26,3 +28,4 @@ Problem 019:	Counting Sundays
 Problem 020:	Factorial digit sum  
 Problem 021:	Amicable numbers  
 Problem 022:	Names scores   
+Problem 023:	Non-abundant sums   
