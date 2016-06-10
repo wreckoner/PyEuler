@@ -29,3 +29,4 @@ Problem 020:	Factorial digit sum
 Problem 021:	Amicable numbers  
 Problem 022:	Names scores   
 Problem 023:	Non-abundant sums   
+Problem 024:	Lexicographic permutations  
