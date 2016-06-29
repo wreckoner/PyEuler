@@ -30,21 +30,7 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 Answer: 23514624000
 """
 
-def main(number_string):
-	"""Create a window of 13 characters that traverses the entire number and finds product for each window. Linear time complexity."""
-	left, right = 0, 13
-	largest_product = 0
-	while right < len(number_string):
-		window = number_string[left:right]
-		product = eval('*'.join(window))
-		if product > largest_product:
-			largest_product = product
-		left += 1
-		right += 1
-	return largest_product
-
-if __name__ == '__main__':
-	print(main("73167176531330624919225119674426574742355349194934\
+parameter = "73167176531330624919225119674426574742355349194934\
 96983520312774506326239578318016984801869478851843\
 85861560789112949495459501737958331952853208805511\
 12540698747158523863050715693290963295227443043557\
@@ -63,4 +49,20 @@ if __name__ == '__main__':
 07198403850962455444362981230987879927244284909188\
 84580156166097919133875499200524063689912560717606\
 05886116467109405077541002256983155200055935729725\
-71636269561882670428252483600823257530420752963450"))
+71636269561882670428252483600823257530420752963450"
+
+def problem_8(number_string):
+	"""Create a window of 13 characters that traverses the entire number and finds product for each window. Linear time complexity."""
+	left, right = 0, 13
+	largest_product = 0
+	while right < len(number_string):
+		window = number_string[left:right]
+		product = eval('*'.join(window))
+		if product > largest_product:
+			largest_product = product
+		left += 1
+		right += 1
+	return largest_product
+
+if __name__ == '__main__':
+	print problem_8(parameter)

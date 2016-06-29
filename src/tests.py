@@ -27,6 +27,9 @@ class Test_Problems(unittest.TestCase):
 	def test_problem_7(self):
 		self.assertEqual(problem007.problem_7(10001), 104743)
 
+	def test_problem_8(self):
+		self.assertEqual(problem008.problem_8(problem008.parameter), 23514624000)
+
 
 if __name__ == '__main__':
 	unittest.main()
