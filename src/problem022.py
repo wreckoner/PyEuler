@@ -19,7 +19,7 @@ def score_word(word):
 	return sum(map(lambda x: ord(x)-ord('a')+1, str(word).lower()))
 
 
-def main(word_file="files/p022_names.txt"):
+def main(word_file="../files/p022_names.txt"):
 	"""
 	Reads file, splits names into list, sorts it and returns the sum
 	of the product of word score and postion in list of each name.
@@ -32,4 +32,4 @@ def main(word_file="files/p022_names.txt"):
 
 
 if __name__ == '__main__':
-	print main()
+	print(main())

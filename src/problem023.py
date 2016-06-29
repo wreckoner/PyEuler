@@ -24,8 +24,7 @@ def get_proper_divisors(number):
 	proper_divisors = set([1])
 	for i in xrange(2, int(math.sqrt(number))+1):
 		if number%i == 0:
-			proper_divisors.add(i)
-			proper_divisors.add(number/i)
+			proper_divisors.update((i, number/i))
 	return tuple(proper_divisors)
 
 def get_abundant_numbers(upper=28123):
@@ -56,4 +55,4 @@ def main(upper=28123):
 	return answer
 
 if __name__ == '__main__':
-	print main()
+	print(main())

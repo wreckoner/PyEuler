@@ -26,8 +26,7 @@ def get_proper_divisors(num):
 		proper_divisors = set([1])
 		for x in xrange(2, int(math.sqrt(num))+1):
 			if num%x == 0:
-				proper_divisors.add(x)
-				proper_divisors.add(num/x)
+				proper_divisors.update((x, num/x))
 		return list(proper_divisors)
 
 
@@ -50,4 +49,4 @@ def brute_force(limit=10000):
 
 
 if __name__ == '__main__':
-	print brute_force(10000)
+	print(brute_force(10000))
