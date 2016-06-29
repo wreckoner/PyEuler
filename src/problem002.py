@@ -23,4 +23,4 @@ def main(limit = 4000000):
 
 
 if __name__ == '__main__':
-	print main()
+	print(main())

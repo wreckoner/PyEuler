@@ -17,4 +17,4 @@ def main(limit = 1000):
 	return sum
 
 if __name__ == "__main__":
-	print main()
+	print(main())

@@ -22,4 +22,4 @@ def main(num):
 
 
 if __name__ == "__main__":
-	print max(main(600851475143))
+	print(max(main(600851475143)))
