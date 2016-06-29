@@ -15,7 +15,7 @@ Find the difference between the sum of the squares of the first one hundred natu
 Answer: 25164150
 """
 
-def main(lim):
+def problem_6(lim):
 	sum_of_squares = 0
 	summation = 0
 
@@ -26,4 +26,4 @@ def main(lim):
 	return abs(sum_of_squares - summation*summation)
 
 if __name__ == '__main__':
-	print(main(100))
+	print(problem_6(100))

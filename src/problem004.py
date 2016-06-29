@@ -7,7 +7,6 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 Answer: 906609
 '''
-
 def is_palindrome(num):
 	""" Returns true if a number is a palindrome """
 	reverse, forward = 0, num
@@ -16,28 +15,18 @@ def is_palindrome(num):
 		num /= 10
 	return forward == reverse
 
-def main():
-	upper, lower = 999, 100
-	largest = 0
-	for a in xrange(upper, lower, -1):
-		for b in xrange(a, lower, -1):
-			if is_palindrome(a*b) and largest < a*b:
-				largest = a*b
-	return largest
-
-def harrys_method():
+def problem_4():
 	"""Enumerate all 6 digit palindromes 999*999 downwards, and inspect each palindrome for a 3 digit factor."""
 	upper, lower = 999, 100
-	for i in xrange(upper*upper, lower*lower, -1):
+	for i in xrange(upper**2, lower**2, -1):
 		if is_palindrome(i):
 			factor = upper
 			while factor >= lower:
 				if i%factor == 0 and lower-1<(i/factor)<upper+1 :
-					print factor
 					return i
 				else:
 					factor -= 1
 
 
 if __name__ == "__main__":
-	print(harrys_method())
+	print(problem_4())

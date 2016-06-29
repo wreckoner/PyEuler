@@ -9,7 +9,10 @@ Answer: 6857
 '''
 import itertools
 
-def main(num):
+def problem_3(num):
+	"""
+	Largest prime factor of num.
+	"""
 	prime_factors = []
 	for n in itertools.count(2):
 		if n > num:
@@ -18,8 +21,8 @@ def main(num):
 			prime_factors.append(n)
 			while (num%n == 0):
 				num = num/n
-	return prime_factors
+	return max(prime_factors)
 
 
 if __name__ == "__main__":
-	print(max(main(600851475143)))
+	print(problem_3(600851475143))

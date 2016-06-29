@@ -22,7 +22,7 @@ def prime_seive(upper):
 
 
 
-def main(n):
+def problem_7(n):
 	""" Find the upper bound of the nth prime number and find all prime numbers upto that bound."""
 	upper_bound = int(n*math.log(n)) + int(n*math.log(math.log(n))) # The nth prime number p_n < nlogn +nloglogn #themoreyouknow
 	primes = prime_seive(upper_bound+1)
@@ -35,4 +35,4 @@ def main(n):
 
 
 if __name__ == '__main__':
-	print(main(10001))
+	print(problem_7(10001))

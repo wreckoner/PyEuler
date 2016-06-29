@@ -9,7 +9,10 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 Answer: 233168
 '''
 
-def main(limit = 1000):
+def problem_1(limit = 1000):
+	"""
+	Multiples of 3 and 5
+	"""
 	sum = 0
 	for num in xrange(1, 1000):
 		if num%3 == 0 or num%5 == 0:
@@ -17,4 +20,4 @@ def main(limit = 1000):
 	return sum
 
 if __name__ == "__main__":
-	print(main())
+	print(problem_1(1000))

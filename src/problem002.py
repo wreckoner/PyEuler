@@ -10,7 +10,10 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 Answer: 4613732
 '''
 
-def main(limit = 4000000):
+def problem_2(limit = 4000000):
+	"""
+	Find the sum of the even-valued terms, whose values do not exceed four million.
+	"""
 	n1, n2 = 1, 2
 	even_sum = 0
 	while (n2 <= limit):
@@ -23,4 +26,4 @@ def main(limit = 4000000):
 
 
 if __name__ == '__main__':
-	print(main())
+	print(problem_2(4000000))
