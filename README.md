@@ -1,7 +1,9 @@
 # PyEuler  
 
 ![alt text](https://projecteuler.net/profile/sand_reckoner.png "Project Euler")
-
+[![Code Climate](https://codeclimate.com/github/wreckoner/PyEuler/badges/gpa.svg)](https://codeclimate.com/github/wreckoner/PyEuler)
+[![Test Coverage](https://codeclimate.com/github/wreckoner/PyEuler/badges/coverage.svg)](https://codeclimate.com/github/wreckoner/PyEuler/coverage)
+[![Issue Count](https://codeclimate.com/github/wreckoner/PyEuler/badges/issue_count.svg)](https://codeclimate.com/github/wreckoner/PyEuler)
 Python solutions of Project Euler problems.  
 
 Nothing much to say. Each solution includes the question and comments (if any).  
