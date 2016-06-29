@@ -28,4 +28,4 @@ def main(upper):
 
 
 if __name__ == "__main__":
-	print main(20)
+	print(main(20))

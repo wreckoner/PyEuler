@@ -26,4 +26,4 @@ def main(lim):
 	return abs(sum_of_squares - summation*summation)
 
 if __name__ == '__main__':
-	print main(100)
+	print(main(100))
