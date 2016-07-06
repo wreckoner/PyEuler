@@ -8,5 +8,8 @@ script: python src/tests.py
 #   only:
 #     - master
 addons:
-    code_climate:
-        repo_token: f3606621e950957bc877c77d9c43a598a142d05b84bb5e5eb4d410923d539b38
+  code_climate:
+    repo_token: f3606621e950957bc877c77d9c43a598a142d05b84bb5e5eb4d410923d539b38
+
+notifications:
+  email: false
