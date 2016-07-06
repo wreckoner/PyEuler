@@ -1,9 +1,12 @@
 language: python
 python:
-  - "2.7"
+  - 2.7
 # command to install dependencies
 
 script: python src/tests.py
-branches:
-  only:
-    - master
+# branches:
+#   only:
+#     - master
+addons:
+    code_climate:
+        repo_token: f3606621e950957bc877c77d9c43a598a142d05b84bb5e5eb4d410923d539b38

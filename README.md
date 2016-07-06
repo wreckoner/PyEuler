@@ -1,4 +1,5 @@
 # PyEuler  
+[![Build Status](https://travis-ci.org/wreckoner/PyEuler.svg?branch=master)](https://travis-ci.org/wreckoner/PyEuler)
 [![Code Climate](https://codeclimate.com/github/wreckoner/PyEuler/badges/gpa.svg)](https://codeclimate.com/github/wreckoner/PyEuler)
 [![Test Coverage](https://codeclimate.com/github/wreckoner/PyEuler/badges/coverage.svg)](https://codeclimate.com/github/wreckoner/PyEuler/coverage)
 [![Issue Count](https://codeclimate.com/github/wreckoner/PyEuler/badges/issue_count.svg)](https://codeclimate.com/github/wreckoner/PyEuler)
