@@ -84,10 +84,10 @@ def largest_product_in_a_grid(grid):
 	rows, cols = len(grid), len(grid[0])
 	for i in xrange(rows-3):
 		for j in xrange(cols-3):
-			four_by_four = [[grid[i][j], grid[i][j+1], grid[i][j+2], grid[i][j+3]],
-							[grid[i+1][j], grid[i+1][j+1], grid[i+1][j+2], grid[i+1][j+3]],
-							[grid[i+2][j], grid[i+2][j+1], grid[i+2][j+2], grid[i+2][j+3]],
-							[grid[i+3][j], grid[i+3][j+1], grid[i+3][j+2], grid[i+3][j+3]]]
+			four_by_four = [grid[i][j:j+4],
+							grid[i+1][j:j+4],
+							grid[i+2][j:j+4],
+							grid[i+3][j:j+4]]
 			large = find_largest(four_by_four)
 			if large > largest:
 				largest = large
