@@ -1,5 +1,5 @@
 '''
-Problem 1
+Problem 1: Multiples of 3 and 5
 
 Multiples of 3 and 5
 
@@ -9,7 +9,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 Answer: 233168
 '''
 
-def problem_1(limit = 1000):
+def multiples_of_3_and_5(limit = 1000):
 	"""
 	Multiples of 3 and 5
 	"""
@@ -20,4 +20,4 @@ def problem_1(limit = 1000):
 	return sum
 
 if __name__ == "__main__":
-	print(problem_1(1000))
+	print multiples_of_3_and_5(1000)

@@ -1,6 +1,7 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Problem 7
+Problem 7: 10001st prime
 
 By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
 
@@ -11,7 +12,10 @@ Answer: 104743
 import math
 
 def prime_seive(upper):
-	"""Find all prime numbers upto upper, excluding it. Will throw memory error if the upper bound is too large."""
+	"""
+	Returns a list of all prime numbers less than upper. 
+	Will throw memory error if the upper bound is too large.
+	"""
 	lower = 2
 	primes = [False] * 2 + [True for x in xrange(lower, upper)]
 	for index in xrange(lower, int(math.sqrt(upper))):
@@ -22,8 +26,11 @@ def prime_seive(upper):
 
 
 
-def problem_7(n):
-	""" Find the upper bound of the nth prime number and find all prime numbers upto that bound."""
+def _10001st_prime(n):
+	"""
+	Returns the 10001st prime number.
+	Find the upper bound of the nth prime number and find all prime numbers upto that bound.
+	"""
 	upper_bound = int(n*math.log(n)) + int(n*math.log(math.log(n))) # The nth prime number p_n < nlogn +nloglogn #themoreyouknow
 	primes = prime_seive(upper_bound+1)
 	counter = 0
@@ -35,4 +42,4 @@ def problem_7(n):
 
 
 if __name__ == '__main__':
-	print(problem_7(10001))
+	print _10001st_prime(10001)

@@ -1,5 +1,5 @@
 '''
-Problem 3
+Problem 3: Largest prime factor
 
 The prime factors of 13195 are 5, 7, 13 and 29.
 
@@ -9,9 +9,9 @@ Answer: 6857
 '''
 import itertools
 
-def problem_3(num):
+def largets_prime_factor(num):
 	"""
-	Largest prime factor of num.
+	Returns the largest prime factor of num.
 	"""
 	prime_factors = []
 	for n in itertools.count(2):
@@ -25,4 +25,4 @@ def problem_3(num):
 
 
 if __name__ == "__main__":
-	print(problem_3(600851475143))
+	print largets_prime_factor(600851475143)

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Problem 6
+Problem 6: Sum square difference
 
 The sum of the squares of the first ten natural numbers is,
 
@@ -15,7 +15,7 @@ Find the difference between the sum of the squares of the first one hundred natu
 Answer: 25164150
 """
 
-def problem_6(lim):
+def sum_square_difference(lim):
 	sum_of_squares = 0
 	summation = 0
 
@@ -26,4 +26,4 @@ def problem_6(lim):
 	return abs(sum_of_squares - summation*summation)
 
 if __name__ == '__main__':
-	print(problem_6(100))
+	print sum_square_difference(100)

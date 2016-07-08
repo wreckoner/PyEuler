@@ -1,5 +1,5 @@
 """
-Problem 5
+Problem 5: Smallest multiple
 
 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
 
@@ -8,7 +8,7 @@ What is the smallest positive number that is evenly divisible by all of the numb
 Answer: 232792560
 """
 
-def problem_5(upper):
+def smallest_multiple(upper):
 	"""
 	This method returns the smallest multiple of all the integes less than or equal to <upper>.
 	It has an upper bound of x^2 on the time complexity. 
@@ -27,4 +27,4 @@ def problem_5(upper):
 
 
 if __name__ == "__main__":
-	print problem_5(20)
+	print smallest_multiple(20)

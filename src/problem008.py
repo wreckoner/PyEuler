@@ -1,6 +1,6 @@
 #-*- coding:utf-8 -*-
 """
-Problem 8.
+Problem 8: Largest product in a series
 
 The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.
 
@@ -30,7 +30,7 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 Answer: 23514624000
 """
 
-parameter = "73167176531330624919225119674426574742355349194934\
+SERIES = "73167176531330624919225119674426574742355349194934\
 96983520312774506326239578318016984801869478851843\
 85861560789112949495459501737958331952853208805511\
 12540698747158523863050715693290963295227443043557\
@@ -51,8 +51,10 @@ parameter = "73167176531330624919225119674426574742355349194934\
 05886116467109405077541002256983155200055935729725\
 71636269561882670428252483600823257530420752963450"
 
-def problem_8(number_string):
-	"""Create a window of 13 characters that traverses the entire number and finds product for each window. Linear time complexity."""
+def largest_product_in_a_series(number_string):
+	"""
+	Create a window of 13 characters that traverses the entire number and finds product for each window. Linear time complexity.
+	"""
 	left, right = 0, 13
 	largest_product = 0
 	while right < len(number_string):
@@ -65,4 +67,4 @@ def problem_8(number_string):
 	return largest_product
 
 if __name__ == '__main__':
-	print problem_8(parameter)
+	print largest_product_in_a_series(SERIES)

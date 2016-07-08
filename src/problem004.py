@@ -1,5 +1,5 @@
 '''
-Problem 4
+Problem 4: Largest palindrome product
 
 A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 * 99.
 
@@ -15,7 +15,7 @@ def is_palindrome(num):
 		num /= 10
 	return forward == reverse
 
-def problem_4():
+def largest_palindrome_product():
 	"""Enumerate all 6 digit palindromes 999*999 downwards, and inspect each palindrome for a 3 digit factor."""
 	upper, lower = 999, 100
 	for i in xrange(upper**2, lower**2, -1):
@@ -29,4 +29,4 @@ def problem_4():
 
 
 if __name__ == "__main__":
-	print(problem_4())
+	print largest_palindrome_product()

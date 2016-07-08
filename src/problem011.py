@@ -1,6 +1,7 @@
+#!/usr/bin/env python
 #-*- coding:utf-8 -*-
 """
-Problem 11
+Problem 11: Largest product in a grid
 
 In the 20×20 grid below, four numbers along a diagonal line have been marked in red.
 
@@ -32,44 +33,9 @@ What is the greatest product of four adjacent numbers in the same direction (up,
 Answer: 70600674
 """
 
-import pprint
+import pprint, operator
 
-def find_largest(four_by_four):
-	"""Returns the largest of the top row, leftmost column, diagonal and off diagonal products"""
-	row_product = four_by_four[0][0] * four_by_four[0][1] * four_by_four[0][2] * four_by_four[0][3]
-	col_product = four_by_four[0][0] * four_by_four[1][0] * four_by_four[2][0] * four_by_four[3][0]
-	diag_product = four_by_four[0][0] * four_by_four[1][1] * four_by_four[2][2] * four_by_four[3][3]
-	off_diag_product = four_by_four[0][3] * four_by_four[1][2] * four_by_four[2][1] * four_by_four[3][0]
-	return max(row_product, col_product, diag_product, off_diag_product)
-
-
-def print_grid(grid):
-	"""Prints out the grid. Used for debugging."""
-	print '\n'
-	for row in grid:
-		for element in row:
-			print element,
-		print
-
-def main(grid):
-	"""Creates a 4*4 windows that traverses the entire grid from top left to bottom right, row by row and finds all possible products and returns the maximum."""
-	largest = 0
-	rows, cols = len(grid), len(grid[0])
-	for i in xrange(rows-3):
-		for j in xrange(cols-3):
-			four_by_four = [[grid[i][j], grid[i][j+1], grid[i][j+2], grid[i][j+3]],
-							[grid[i+1][j], grid[i+1][j+1], grid[i+1][j+2], grid[i+1][j+3]],
-							[grid[i+2][j], grid[i+2][j+1], grid[i+2][j+2], grid[i+2][j+3]],
-							[grid[i+3][j], grid[i+3][j+1], grid[i+3][j+2], grid[i+3][j+3]]]
-			large = find_largest(four_by_four)
-			if large > largest:
-				largest = large
-	return largest
-
-
-
-if __name__ == '__main__':
-	grid = [
+GRID = [
 	[8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
 	[49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0],
 	[81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 03, 49, 13, 36, 65],
@@ -91,4 +57,44 @@ if __name__ == '__main__':
 	[20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
 	[1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48]
 	]
-	print main(grid)
+
+
+def find_largest(four_by_four):
+	"""Returns the largest of the top row, leftmost column, diagonal and off diagonal products"""
+	row_product = reduce(operator.mul, four_by_four[0])
+	col_product = reduce(operator.mul, (four_by_four[i][0] for i in xrange(4)))
+	diag_product = reduce(operator.mul, (four_by_four[i][i] for i in xrange(4)))
+	off_diag_product = reduce(operator.mul, (four_by_four[i][3-i] for i in xrange(4)))
+	return max(row_product, col_product, diag_product, off_diag_product)
+
+
+def print_grid(grid):
+	"""Prints out the grid. Used for debugging."""
+	print '\n'
+	for row in grid:
+		for element in row:
+			print element,
+		print
+
+def largest_product_in_a_grid(grid):
+	"""
+	Creates a 4*4 windows that traverses the entire grid from top left to bottom right, row by row and finds all possible products and returns the maximum.
+	"""
+	largest = 0
+	rows, cols = len(grid), len(grid[0])
+	for i in xrange(rows-3):
+		for j in xrange(cols-3):
+			four_by_four = [[grid[i][j], grid[i][j+1], grid[i][j+2], grid[i][j+3]],
+							[grid[i+1][j], grid[i+1][j+1], grid[i+1][j+2], grid[i+1][j+3]],
+							[grid[i+2][j], grid[i+2][j+1], grid[i+2][j+2], grid[i+2][j+3]],
+							[grid[i+3][j], grid[i+3][j+1], grid[i+3][j+2], grid[i+3][j+3]]]
+			large = find_largest(four_by_four)
+			if large > largest:
+				largest = large
+	return largest
+
+
+
+if __name__ == '__main__':
+	
+	print largest_product_in_a_grid(GRID)
