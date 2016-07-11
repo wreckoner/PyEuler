@@ -38,23 +38,7 @@ Answer: 1074
 
 import pprint
 
-def main(array):
-	""" 
-	I'll admit I started thinking of a tree traversal algorithm, before reading up on the internet,
-	and found this approach. Deceptively simple!
-	Essentially, goes bottom-up from the second last row, and at each row finds the bigger adjacent number in the next row and replaces the current number by the sum of itself and the bigger number.
-	You can check out this post on SO: http://stackoverflow.com/questions/8002252/euler-project-18-approach
-	"""
-	while len(array) > 1:
-		# pprint.pprint(array)
-		# print '\n\n'
-		for i in xrange(len(array[-2])):
-			array[-2][i] += max(array[-1][i], array[-1][i+1])
-		array.pop(-1)
-	return array[0][0]
-
-if __name__ == '__main__':
-	array = [
+ARRAY = [
 			[75],
 			[95, 64],
 			[17, 47, 82],
@@ -71,5 +55,19 @@ if __name__ == '__main__':
 			[63, 66, 04, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31],
 			[04, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 04, 23]
 			]
-	
-	print main(array)
+
+def maximum_path_sum_i(array):
+	""" 
+	I'll admit I started thinking of a tree traversal algorithm, before reading up on the internet,
+	and found this approach. Deceptively simple!
+	Essentially, goes bottom-up from the second last row, and at each row finds the bigger adjacent number in the next row and replaces the current number by the sum of itself and the bigger number.
+	You can check out this post on SO: http://stackoverflow.com/questions/8002252/euler-project-18-approach
+	"""
+	while len(array) > 1:
+		for i in xrange(len(array[-2])):
+			array[-2][i] += max(array[-1][i], array[-1][i+1])
+		array.pop(-1)
+	return array[0][0]
+
+if __name__ == '__main__':
+	print main(ARRAY)

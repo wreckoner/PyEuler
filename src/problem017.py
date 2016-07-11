@@ -13,7 +13,7 @@ NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-
 Answer:	21124
 """
 
-def main(lower_bound=1, upper_bound=1000):
+def number_letter_counts(lower_bound=1, upper_bound=1000):
 	"""
 	The numbers with having basic (not composed of other number-words) words are saved in a dict and then a nested if else checks each number according to the naming rules for numbers. Self-explanatory. 
 	"""
@@ -42,9 +42,8 @@ def main(lower_bound=1, upper_bound=1000):
 			word = number_to_word[num]				
 
 		length += len(word.replace(' ', ''))
-		# print num, word, '\t', len(word.replace(' ', ''))
 	return length
 
 
 if __name__ == '__main__':
-	print main(1, 1000)
+	print number_letter_counts(1, 1000)

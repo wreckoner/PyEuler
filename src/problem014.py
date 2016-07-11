@@ -21,8 +21,9 @@ Answer: 837799
 """
 import math
 
-def optimized_collatz(upper_bound=1000000):
-	"""This calculates the length of all collatz sequence with starting number between 1 and 1 million.
+def longest_collatz_sequence(upper_bound=1000000):
+	"""
+	This calculates the length of all collatz sequence with starting number between 1 and 1 million.
 	There are 2 optimizations:
 		1. If a number is a power of 2, then no need to calculate further
 		2. Caches the length of collatz sequences, so if larger sequence contain a smaller one, simply adds the length.
@@ -48,7 +49,7 @@ def optimized_collatz(upper_bound=1000000):
 		if longest < length:
 			start = init_val
 			longest = length
-	return start, longest
+	return start
 
 if __name__ == '__main__':
-	print optimized_collatz(1000000)[0]
+	print longest_collatz_sequence(1000000)

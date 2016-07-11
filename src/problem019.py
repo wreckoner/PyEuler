@@ -25,7 +25,7 @@ def is_leap(year):
 	"""
 	return not year%400 or not (year%4 and year%100)
 
-def main():
+def counting_sundays():
 	"""
 	This function simply calculates the cumulative number of days from 1/1/1901 to 1/31/2000, and checks if the 
 	cumulative sums are divisible by zero. Note that 1/1/1990 was a Sunday, but I have shifted the day
@@ -49,4 +49,4 @@ def main():
 
 
 if __name__ == '__main__':
-	print main()
+	print counting_sundays()

@@ -11,7 +11,7 @@ Answer:	1366
 """
 import math
 
-def simple_way(base=2, power=1000):
+def power_digit_sum_simple(base=2, power=1000):
 	"""Simply finds the power using Python's math.pow. Note that a lot of languages do not support such large numbers."""
 	result = int(math.pow(base, power))
 	summation = 0
@@ -21,7 +21,7 @@ def simple_way(base=2, power=1000):
 	return summation
 
 
-def using_list(base=2, power=1000):
+def power_digit_sum_using_list(base=2, power=1000):
 	"""
 	This method stores the number as a list, each digit as a separate element. 
 	This overcomes any limit that may exist on the max size of number datatype.

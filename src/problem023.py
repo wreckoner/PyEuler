@@ -13,19 +13,7 @@ Find the sum of all the positive integers which cannot be written as the sum of 
 
 Answer: 4179871
 """
-import math
-
-def get_proper_divisors(number):
-	"""
-	Returns a tuple of proper divisors of number.
-	"""
-	if number == 1:
-		return ()
-	proper_divisors = set([1])
-	for i in xrange(2, int(math.sqrt(number))+1):
-		if number%i == 0:
-			proper_divisors.update((i, number/i))
-	return tuple(proper_divisors)
+import _lib
 
 def get_abundant_numbers(upper=28123):
 	"""
@@ -33,12 +21,12 @@ def get_abundant_numbers(upper=28123):
 	"""
 	abundant_numbers = set([])
 	for i in xrange(12, upper+1):
-		proper_divisors = get_proper_divisors(i)
+		proper_divisors = _lib.get_proper_divisors(i)
 		if sum(proper_divisors) > i:
 			abundant_numbers.add(i)
 	return abundant_numbers
 
-def main(upper=28123):
+def non_abundant_sums(upper):
 	"""
 	Good ol' brute force. Create a hashset of all abundant numbers,
 	then find all numbers less than upper which cannot be a sum of
@@ -55,4 +43,4 @@ def main(upper=28123):
 	return answer
 
 if __name__ == '__main__':
-	print(main())
+	print non_abundant_sums(28123)

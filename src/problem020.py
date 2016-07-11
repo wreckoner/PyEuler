@@ -14,7 +14,7 @@ Find the sum of the digits in the number 100!
 Answer: 648
 """
 
-def simple_way(num=100):
+def factorial_digit_sum(num):
 	"""
 	This method simply calculates the factorial and then returns the sum of the digits.
 	This method would not work in many languages which have a maximum limit for integral numbers.
@@ -25,4 +25,4 @@ def simple_way(num=100):
 
 
 if __name__ == '__main__':
-	print simple_way()
+	print factorial_digit_sum(100)

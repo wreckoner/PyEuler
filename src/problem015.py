@@ -11,7 +11,7 @@ Answer: 137846528820
 """
 import math
 
-def main(grid_dimension):
+def lattice_paths(grid_dimension):
 	""" This problem can easily be solved by combinatorics.
 		For an N*N square grid the total number of moves required to reach the bottom right is 2N.
 		In addition there will be exactly N moves right and N moves down. What remains is to find the 
@@ -23,4 +23,4 @@ def main(grid_dimension):
 
 
 if __name__ == '__main__':
-	print main(20)
+	print lattice_paths(20)

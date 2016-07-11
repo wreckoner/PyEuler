@@ -14,30 +14,17 @@ Evaluate the sum of all the amicable numbers under 10000.
 Answer: 31626
 """
 
-import math
-
-def get_proper_divisors(num):
-	""" 
-	Returns a list of all positive proper divisors of integer num.
-	"""
-	if num == 1:
-		return []
-	else:
-		proper_divisors = set([1])
-		for x in xrange(2, int(math.sqrt(num))+1):
-			if num%x == 0:
-				proper_divisors.update((x, num/x))
-		return list(proper_divisors)
+import math, _lib
 
 
-def brute_force(limit=10000):
+def amicable_numbers(limit):
 	"""
 	Iterates through all the numbers from 2  through limit and saves the sum of proper divisors of 
 	each number in a hashtable. In a second iteration, finds all amicable paris.
 	"""
 	sum_of_divisors = {}
 	for num in xrange(2, limit+1):
-		proper_divisors = get_proper_divisors(num)
+		proper_divisors = _lib.get_proper_divisors(num)
 		sum_of_divisors[num] = sum(proper_divisors)
 
 	sum_amicable_numbers = 0
@@ -49,4 +36,4 @@ def brute_force(limit=10000):
 
 
 if __name__ == '__main__':
-	print(brute_force(10000))
+	print(amicable_numbers(10000))

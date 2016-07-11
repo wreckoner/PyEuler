@@ -11,7 +11,6 @@ What is the total of all the name scores in the file?
 
 Answer: 871198282
 """
-
 def score_word(word):
 	"""
 	Returns the score of a word.
@@ -19,7 +18,7 @@ def score_word(word):
 	return sum(map(lambda x: ord(x)-ord('a')+1, str(word).lower()))
 
 
-def main(word_file="../files/p022_names.txt"):
+def names_scores(word_file):
 	"""
 	Reads file, splits names into list, sorts it and returns the sum
 	of the product of word score and postion in list of each name.
@@ -32,4 +31,4 @@ def main(word_file="../files/p022_names.txt"):
 
 
 if __name__ == '__main__':
-	print(main())
+	print names_scores("files/p022_names.txt")
