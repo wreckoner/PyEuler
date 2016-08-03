@@ -35,3 +35,4 @@ Problem 022:	Names scores
 Problem 023:	Non-abundant sums   
 Problem 024:	Lexicographic permutations   
 Problem 025:	1000-digit Fibonacci number   
+Problem 026:	Reciprocal cycles   
