@@ -11,6 +11,7 @@ What is the total of all the name scores in the file?
 
 Answer: 871198282
 """
+import os
 def score_word(word):
 	"""
 	Returns the score of a word.
@@ -31,4 +32,4 @@ def names_scores(word_file):
 
 
 if __name__ == '__main__':
-	print names_scores("files/p022_names.txt")
+	print names_scores(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'files', 'p022_names.txt'))
