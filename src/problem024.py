@@ -49,8 +49,8 @@ def elegant_method(elements, position, factorial):
 	index = (position-remainder)/factorial
 	return [elements[index]] + elegant_method(elements[:index]+elements[index+1:], remainder, factorial/(len(elements)-1))
 
-def main():
-	return ''.join(map(str, elegant_method(range(10), 999999, reduce(lambda x,y:x*y, range(1,10)))))
+def lexicographic_permutations():
+	return int(''.join(map(str, elegant_method(range(10), 999999, reduce(lambda x,y:x*y, range(1,10))))))
 
 if __name__ == '__main__':
-	print main()
+	print lexicographic_permutations()
