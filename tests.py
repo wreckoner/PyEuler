@@ -2,7 +2,7 @@
 # -*-coding:utf-8 -*-
 
 import unittest
-import problem001, problem002, problem003, problem004, problem005, problem006, problem007, problem008, problem009, problem010, problem011, problem012, problem013, problem014, problem015, problem016, problem017, problem018, problem019, problem020, problem021, problem022, problem023
+from src import problem001, problem002, problem003, problem004, problem005, problem006, problem007, problem008, problem009, problem010, problem011, problem012, problem013, problem014, problem015, problem016, problem017, problem018, problem019, problem020, problem021, problem022, problem023
 
 class Test_Problems(unittest.TestCase):
 
@@ -70,8 +70,8 @@ class Test_Problems(unittest.TestCase):
 	def test_problem_21(self):
 		self.assertEqual(problem021.amicable_numbers(10000), 31626)
 
-	# def test_problem_22(self):
-	# 	self.assertEqual(problem022.names_scores("./files/p022_names.txt"), 871198282)
+	def test_problem_22(self):
+		self.assertEqual(problem022.names_scores("src/files/p022_names.txt"), 871198282)
 
 
 
